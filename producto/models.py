@@ -18,7 +18,7 @@ class Producto(models.Model):
         CONSUMIBLES='CONSUMIBLES',("Consumibles")
     categoria=models.CharField(max_length=11,choices=Categoria.choices,verbose_name="Categoria")
     nombre = models.CharField(max_length=45, verbose_name=_("Nombre"), validators=[letras_validator])
-    descripcion = models.CharField(max_length=60, verbose_name=_("Descripcion"), validators=[letras_validator])
+    descripcion = models.CharField(max_length=60, verbose_name=_("Descripcion"))
     precio = models.DecimalField(max_digits=12, decimal_places=2, verbose_name=_("Precio"))
     stock = models.PositiveIntegerField(verbose_name=_("Stock"))
     

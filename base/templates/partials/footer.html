@@ -1,8 +1,81 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0; /* Cambia el color de fondo según tu preferencia */
+        }
 
-<footer class="main-footer">
-  <div class="d-flex justify-content-center">
-    © 2023 Pineda Motor's, Lubricentro.
- </div>
-</footer>
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        .main-footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .widget {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .widget-title {
+            color: #fff;
+        }
+
+        .d-flex {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .footer-img1{
+            max-width: 110px;
+            height: 110px;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            
+        }
+        .horizontal-line {
+            border: 1px solid #ff0000; 
+            margin: 10px 0; 
+        }
+
+        
+    </style>
+</head> 
+<body>
+    <footer class="main-footer">  
+      <img style="margin-top: 0%;" src="{% static 'img/logo1.png' %}"  class="footer-img1">  
+      <div class="widget subscribe no-box">
+        <div class="widget subscribe no-box">
+            <h5 class="widget-title">PINEDA MOTOR'S<span></span></h5>
+            <p>"Potenciando tu viaje, Pineda Motors: Lubricantes y Accesorios para un rendimiento excepcional."</p>
+            <hr class="horizontal-line">
+        </div>
+        <div class="d-flex justify-content-center">
+            © 2023 Pineda Motor's, Lubricentro.
+        </div>
+      </div>
+     
+    </footer>
+</body>
+</html>
 {% include 'partials/scripts.html' %}

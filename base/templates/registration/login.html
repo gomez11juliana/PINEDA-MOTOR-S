@@ -21,21 +21,19 @@
             <div class="form-value">
                 <form method="post">
                     <h2>Login</h2>
+                    <img src="{% static 'img/logo1.png' %}" style="width: 210px; height: 210px;">
                     {% csrf_token %}
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <label for="">Usuario</label>
-                        <input type="text" name="{{ form.username.name }}" class="form-control" placeholder="Usuario">   
+
+                        <input type="text" name="{{ form.username.name }}" class="form-control" placeholder="USUARIO">   
                     </div>
                     <div class="inputbox">
-                        <ion-icon name="lock-closed-outline">contraseña</ion-icon>
-                        <label for="">Contraseña</label>
-                        <input type="password" name="{{ form.password.name }}" class="form-control" placeholder="Contraseña">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        
+                        <input type="password" name="{{ form.password.name }}" class="form-control" placeholder="CONTRASEÑA">
                     </div>
-                    <div class="forget">
-                        <input type="checkbox" name="{{ form.RememberMeCheckbox.name }}" id="remember">
-                        <label for="remember">Recuérdame</label>
-                    </div>
+                    
                     <button>Iniciar Sesión</button>
                 </form>
                 {% if form.non_field_errors %}
@@ -53,8 +51,9 @@
                         {{ form.password.errors }}
                     </div>
                     {% endif %}
-                    <p class="forget">
-                        <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a>
+                    
+                    <p style="text-align: center; ">
+                        <a href="{% url 'password_reset' %}" style="color:rgb(255, 81, 0)" >¿Olvidaste tu contraseña?</a>
                     </p>   
             </div>
         </div>

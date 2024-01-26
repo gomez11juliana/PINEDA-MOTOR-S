@@ -11,7 +11,7 @@ section{
     min-height: 100vh;
     width: 100%;
     
-    background: url("/static/img/aceite.jpg")no-repeat;
+    background: url("/static/img/login15.jpg")no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -20,19 +20,21 @@ section{
 
 .form-box{
     position: relative;
-    width: 400px;
-    height: 450px;
+    width: 80%;
+    max-width: 400px;
+    height:auto;
     background:transparent;
     border: 2px solid rgb(255,255,255,0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
-
+    margin: auto;
 }
 
-h2{
+h2{ 
     font-size: 2em;
     color:aliceblue;
     text-align: center;
@@ -41,8 +43,14 @@ h2{
 .inputbox{
     position:relative;
     margin: 30px 0;
-    width: 310px;
+    width: 80%;
+    max-width: 310px;
     border-bottom: 2px solid #ffff;
+}
+@media (max-width: 200px) {
+    .inputbox {
+        width: 90%; 
+    }
 }
 .inputbox label{
     position: absolute;
@@ -67,7 +75,7 @@ input:valid ~ label{
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
-    color: #ffff;
+    
 }
 .inputbox ion-icon{
     position: absolute;
@@ -91,10 +99,11 @@ input:valid ~ label{
     text-decoration: none;
 }
 .forget label a:hover{
-    text-decoration: underline;
+    text-decoration:none;
 }
 button{
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     height: 40px;
     border-radius: 40px;
     background: #ffff;
@@ -103,6 +112,11 @@ button{
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+}
+@media (max-width: 768px) {
+    button {
+        width: 90%; 
+    }
 }
 .register{
     font-size: .9em;
@@ -118,3 +132,4 @@ button{
     text-decoration:underline;
 
 }
+
